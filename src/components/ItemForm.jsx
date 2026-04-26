@@ -3,7 +3,7 @@ import { useState } from "react";
 function ItemForm({ initialValues, onSubmit, submitText }) {
   const [formData, setFormData] = useState(
     initialValues || {
-      // sq:"",
+      sq:"",
       name: "",
       category: "",
       price: "",
@@ -30,8 +30,7 @@ function ItemForm({ initialValues, onSubmit, submitText }) {
       <h2>{submitText}</h2>
 
 
-      {/* <label>Stock Quantity</label>
-      <input name="sq" value={formData.sq} onChange={handleChange} required /> */}
+
 
 
       <label>Item Name</label>
@@ -48,6 +47,9 @@ function ItemForm({ initialValues, onSubmit, submitText }) {
         onChange={handleChange}
         required
       />
+
+      <label>Stock Quantity</label>
+      <input name="sq" value={formData.sq} onChange={handleChange} required /> 
 
       <label>Description</label>
       <textarea
